@@ -43,7 +43,7 @@ public class QueueFeeder {
 
 		/*
 		 * 
-		 * Alter Code für RabbitMQ ConnectionFactory factory = new
+		 * Alter Code fuer RabbitMQ ConnectionFactory factory = new
 		 * ConnectionFactory();
 		 * factory.setHost("#{systemEnvironment['RABBITMQ_SERVER']}");
 		 * Connection connection; try { connection = factory.newConnection();

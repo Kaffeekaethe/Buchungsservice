@@ -32,7 +32,7 @@ public class BuchungsserviceAPI {
 	@RequestMapping("/buche")
 	public String buchung(@RequestParam(value = "zug") int zug, @RequestParam(value = "platz") int platz) {
 		boolean status = PlatzuebersichtClient.getStatus(zug, platz);
-		System.out.println(String.format("Statusabfrage für Zug %d, Platz %d gesendet. Ergebnis: %s", zug, platz, status));
+		System.out.println(String.format("Statusabfrage fuer Zug %d, Platz %d gesendet. Ergebnis: %s", zug, platz, status));
 		if (status) {
 			Random r = new Random();
 			if (r.nextInt(5) != 1) {
@@ -53,7 +53,7 @@ public class BuchungsserviceAPI {
 
 	@RequestMapping("/buchungen")
 	public List<Buchung> buchungen(@RequestParam(value = "id") int id) {
-		System.out.println(String.format("Anfrage für alle Buchungen ab ID %d erhalten", id));
+		System.out.println(String.format("Anfrage fuer alle Buchungen ab ID %d erhalten", id));
 		return App.buchungDAO.getBuchungen(id);
 	}
 

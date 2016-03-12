@@ -7,12 +7,12 @@ import com.netflix.discovery.DiscoveryManager;
 
 public class PlatzuebersichtClient {
 
-	// TODO: Enum für den Status
+	// TODO: Enum fuer den Status
 	private static RestTemplate restTemplate = new RestTemplate();
 
 	public static boolean getStatus(int zug, int platz) {
 		try {
-			System.out.println(String.format("Sende Statusanfrage für Zug %d, Platz %d", zug, platz));
+			System.out.println(String.format("Sende Statusanfrage fuer Zug %d, Platz %d", zug, platz));
 
 			InstanceInfo nextServerInfo = DiscoveryManager.getInstance().getDiscoveryClient()
 					.getNextServerFromEureka("platzuebersichtsservice", false);
